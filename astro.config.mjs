@@ -7,7 +7,12 @@ import cloudflare from '@astrojs/cloudflare';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://docs.packetix.io',
-
+	redirects: {
+		'/': {
+			status: 302,
+			destination: '/en/',
+		}
+	},
   integrations: [
       starlight({
           title: 'packet:IX Docs',
