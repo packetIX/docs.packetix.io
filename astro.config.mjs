@@ -4,19 +4,42 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://docs.packetix.io',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'packet:IX Docs',
+			customCss: [
+				'./src/styles/custom.css',
+				'./src/styles/fonts.css',
+			],
+			locales: {
+				en: {
+					label: 'English',
+				},
+				ko: {
+					label: '한국어',
+				},
+				ja: {
+					label: '日本語',
+				},
+			},
+			defaultLocale: 'en',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/packetIX/docs.packetix.io',
+				discord: 'https://packetix.io/discord',
+			},
+			editLink: {
+				baseUrl: 'github.com/packetIX/docs.packetix.io/edit/main/docs/',
+			},
+			logo: {
+				light: './src/assets/logo-light.svg',
+				dark: './src/assets/logo-dark.svg',
+				replacesTitle: true,
 			},
 			sidebar: [
 				{
 					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					autogenerate: { directory: 'guides' },
 				},
 				{
 					label: 'Reference',
