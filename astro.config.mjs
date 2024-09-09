@@ -37,7 +37,7 @@ export default defineConfig({
               discord: 'https://packetix.io/discord',
           },
           editLink: {
-              baseUrl: 'https://github.com/packetIX/docs.packetix.io/edit/main/docs/',
+              baseUrl: 'https://github.com/packetIX/docs.packetix.io/edit/main/',
           },
           logo: {
               light: './src/assets/logo-light.svg',

@@ -10,10 +10,18 @@
   font-display:auto;font-style:normal;font-weight:300;font-stretch:normal;ascent-override: 115%;
 }
 
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css');
+
+/* TODO: Add ja-JP font-face support */
+
 :root {
   --__sl-font: 'fractul-variable', 'SUIT Variable', sans-serif;
 }
 
 html[lang=ko] {
   --__sl-font: 'SUIT Variable', sans-serif;
+}
+
+html[lang=ja] {
+  word-wrap: keep-all;
 }
