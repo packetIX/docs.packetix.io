@@ -2889,7 +2889,6 @@ __metadata:
     astro: "npm:^4.15.3"
     sharp: "npm:^0.32.5"
     typescript: "npm:^5.5.4"
-    wrangler: "npm:^3.75.0"
   languageName: unknown
   linkType: soft
 
@@ -7665,7 +7664,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"wrangler@npm:^3.62.0, wrangler@npm:^3.75.0":
+"wrangler@npm:^3.62.0":
   version: 3.75.0
   resolution: "wrangler@npm:3.75.0"
   dependencies:

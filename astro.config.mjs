@@ -2,6 +2,8 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+import cloudflare from '@astrojs/cloudflare';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://docs.packetix.io',
@@ -30,7 +32,7 @@ export default defineConfig({
               discord: 'https://packetix.io/discord',
           },
           editLink: {
-              baseUrl: 'https://github.com/packetIX/docs.packetix.io/edit/main/docs/',
+              baseUrl: 'github.com/packetIX/docs.packetix.io/edit/main/docs/',
           },
           logo: {
               light: './src/assets/logo-light.svg',
@@ -49,4 +51,7 @@ export default defineConfig({
           ],
       }),
 	],
+
+  output: 'server',
+  adapter: cloudflare(),
 });
